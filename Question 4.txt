@@ -1,0 +1,16 @@
+Write a function that takes in string s where the function finds the first non-repeating letter in the string. Case sensitivity
+matters so h is not equal to H. Only letters are passed in through the string.
+
+Example
+
+Input: potatO
+Output: p
+
+Input: bab
+Output: a
+
+Input: zZ
+Output: z
+
+Input: AAAAAAAq
+Output: q
