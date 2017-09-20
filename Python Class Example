@@ -1,0 +1,41 @@
+class Shape(object):
+  shapeName = "No shape name has been set"
+  def __init__(self, shapeName):
+    self.shapeName = shapeName
+  
+  def sayShape(self):
+    print("I'm a shape!")
+  
+class Triangle(Shape):
+  def __init__(self, baseLen, heightLen):
+    self.baseLen = baseLen
+    self.heightLen = heightLen
+  
+  def area(self):
+    return ((self.baseLen * self.heightLen) * .5)
+
+class Square(Shape):
+  def __init__(self, widthLen, heightLen):
+    self.widthLen = widthLen
+    self.heightLen = heightLen
+    
+  def area(self):
+    return (self.widthLen * self.heightLen)
+    
+  def sayShape(self):
+    print("I'm a square!")
+    super(Square,self).sayShape()
+  
+newTriangle = Triangle(4.0,5.0)
+newTriangle.shapeName = "Triangle"
+newSquare = Square(5, 5)
+newSquare.shapeName = "Square"
+print(newTriangle.shapeName)
+print(newTriangle.area())
+print(newSquare.shapeName)
+print(newSquare.area())
+newSquare = Square(5,5)
+print(newSquare.area())
+newSquare.sayShape()
+
+
